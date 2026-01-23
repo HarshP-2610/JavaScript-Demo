@@ -59,3 +59,18 @@ for (let i = 1; i <= 5; i++) {
     if (i === 4) break;    // Stop the loop entirely
     console.log("Current Value:", i);
 }
+
+//Second example for break
+for (let k = 1; k <= 20; k++) {
+  console.log(k);
+  if (k === 6) {
+    break;
+  }
+}
+//Second example for continue
+for (let k = 1; k <= 20; k++) {
+  console.log(k);
+  if (k === 6) {
+    break;
+  }
+}

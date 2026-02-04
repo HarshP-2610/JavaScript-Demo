@@ -160,3 +160,34 @@ function sayBye() {
 
 // Passing function as argument
 greet(sayBye);
+
+
+// pure vs impure function
+// pure function --> function je same input par same output aapse ane koi bahar na state ne modify na kare (pure function --> je function bahar na state ne modify na kare )
+let a = 10;
+function abcd_pure() {
+  console.log("Hello");
+}
+
+// impure function --> function je same input par different output aapse athava bahar na state ne modify kare (impure function --> je function bahar na state ne modify kare )
+function abcd_impure() {
+  a++;
+  console.log(a);
+}
+
+
+
+
+// closure function
+// function je potana parent function na variables ne access kari shake(return thava valo function use karshe parent function na koi variable) (function within function)
+function outer() {
+  let count = 0;
+  function inner() {
+    count++; // accessing outer(parent) function variable
+    console.log(count);
+  }
+  return inner;
+}
+
+let fnc = outer();
+fnc();

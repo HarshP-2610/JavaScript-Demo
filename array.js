@@ -129,3 +129,108 @@ let temp_data = data.map(val => {
         return val;
     }
 });
+
+
+
+
+
+
+
+// find
+// find tyare j use karvu ke jare array mathi ek
+// value find karvi hoy based on condition
+// find() return kare chhe array no element -->
+// callback no return value nahi
+// never returns what you return inside it
+// returns the array element itself -- not return
+// array
+// .find() stops at the first match
+// It does not continue looping
+let product = ["Laptop", "Mobile", "Tablet", "Desktop", "Smart Watch"];
+
+// Use .filter() to get ALL matches in a new array
+let found_products = product.filter((item) => {
+    if (item === "Mobile" || item === "Tablet") {
+        return true;
+    } else {
+        return false;
+    }
+});
+
+console.log(found_products); // Output: ["Mobile", "Tablet"]
+
+
+
+// some
+// check kare chhe ke array ma koi pan ek item condition satisfy kare chhe ke nahi
+// condition true aave tyare stop kare
+// some() vs find() --> some() can't return you value its return true or false, find() return value of array
+// give ans in true and false
+
+let marks1 = [10, 20, 35, 90];
+
+let any = marks1.some((val) => {
+    if (val > 85) return true;
+    // if (val < 85) return "need improvement";
+});
+
+console.log(any);
+
+
+
+//every
+// check kare chhe ke array ma baddha j items condition satisfy kare chhe ke nahi
+// true -- baddha items condition match kare
+// false -- ek pan fail thay to
+let def =[20, 30, 90, 45];
+let num = def.every(function(val){
+    return val < 40;
+})
+// use case --> check all student is pass or not
+
+// some(), find(), filter(), every()
+
+// let products = ["Tablet", "Mobile", "Laptop", "Mobile"]
+
+// method --> condition --> output
+
+// .some()   --> item === "Mobile" --> true
+// .find()   --> item === "Mobile" --> "Mobile"
+// .filter() --> item === "Mobile" --> ["Mobile", "Mobile"]
+
+
+
+
+
+// Destructuring oprator -- give value to variable (ex. we don't use every time arr1[1], just save it into variable let [ ,k] = arr1)
+let arr4 = [1, 2, 3, 4, 5]
+// let j = arr4[0];
+// let k = arr4[2];
+let [ j, , k] = arr4; // --> destructuring
+// let [j, , k] = arr;
+console.log(k);
+let user_data = ["test", "test@gmail.com", "Male", "Surat"]
+// name, email, gender, city
+// console.log("name", name)
+
+
+
+
+
+
+
+// spread oprator -- copy value from main array
+let arr8 = [1, 2, 3, 4, 5, 6, 7];
+
+// let arr4 = arr3 ; // - just give reference not copy value(when
+// you change into arr4 that will be change arr3 too)
+
+let arr9 = [...arr8];
+
+// ... --> rest --> into function
+// ... --> spred --> into Array and Object
+
+let temp_arr = [1, 2, 3];
+let temp_arr2 = [4, 5, 6];
+
+let mix_arr = [...temp_arr, ...temp_arr2];

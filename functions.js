@@ -6,7 +6,7 @@
 // function name(params) {} --> function declaration
 function abc(){}
 // let fnc = function (){} --> function expression
-let fnc = function() {}
+let fnnc = function() {}
 // let fnc = () => {} --> arrow function --> fat arrow function
 let fnc1 = () => {}
 

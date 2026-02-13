@@ -49,9 +49,9 @@ e.textContent = "h1 tag updated";
 e.innerHTML = "<i>first h1 tag with italics</i>";
 
 
-// ==========================================
+// ======================================
 // 3. CREATING & INSERTING ELEMENTS
-// ==========================================
+// ======================================
 
 // Step 1: Create the element
 let pre_tag = document.createElement("pre");
@@ -63,5 +63,6 @@ pre_tag.textContent = "Hello Pre tag";
 // Step 3: Add to the DOM
 // .prepend() adds the element as the first child of the body
 document.body.prepend(pre_tag);
+// document.body.prepend(pre_tag);
 
 // Note: You could also use .append() to add it to the end.

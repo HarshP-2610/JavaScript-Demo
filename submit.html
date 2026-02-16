@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .card {
+        width: 250px;
+        height: auto;
+        border: 2px solid red;
+        margin: 10px 20px;
+        padding: 10px;
+    }
+
+    .dp_img img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    .h3 {
+        margin-bottom: 5px;
+        font-size: 1.5rem;
+    }
+
+    .h4,
+    .h5 {
+        font-weight: bold;
+        margin-bottom: 2px;
+    } */
+    /* General Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 40px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+form input:focus {
+    border-color: #007bff;
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Card Container Styling */
+/* This handles how multiple cards sit next to each other */
+.card {
+    background: white;
+    width: 280px;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    display: inline-block; /* Allows cards to sit side-by-side */
+    vertical-align: top;
+    border-top: 5px solid #007bff;
+}
+
+/* Profile Image Styling */
+.dp_img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+}
+
+.dp_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f0f0f0;
+}
+
+/* Text inside the Card */
+.card h3 {
+    font-size: 1.4rem;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.card h4 {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 400;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.card h5, .card h6 {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+</style>
+
+<body>
+    <h1 style="margin-left: 10px">Crad Maker</h1>
+    <form>
+        <input type="text" placeholder="Paste Link For Profile image"><br>
+        <input type="text" placeholder="name"><br>
+        <input type="text" placeholder="bio"><br>
+        <input type="email" placeholder="email"><br>
+        <input type="tel" placeholder="Mobile Number"><br>
+        <input type="submit" placeholder="Submit"><br>
+    </form>
+
+    <!-- <div class="card">
+        <div class="dp-img">
+            <img src="https://w0.peakpx.com/wallpaper/837/957/HD-wallpaper-f1-f1-logo.jpg" alt="">
+        </div>
+
+        <h3 id="displayName">Username</h3>
+        <h4 id="displayBio">bio</h4>
+        <h5 id="displayEmail">email</h5>
+        <h5 id="displayPhone">phone Number</h5>
+
+    </div> -->
+
+    <script src="submit.js"></script>
+</body>
+
+</html>

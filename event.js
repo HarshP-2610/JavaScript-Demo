@@ -67,3 +67,15 @@ colorPicker2.addEventListener("input", function(event) {
     console.log("Border Color:", selectedColor);
     bigBox.style.borderColor = selectedColor; 
 });
+
+
+
+// ============================================================
+// 3. Submit and change background color
+// ============================================================
+let form = document.querySelector("form");
+
+form.addEventListener("submit", (event) => {
+    
+    document.body.style.backgroundColor = "black";
+});

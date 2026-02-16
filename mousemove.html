@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cursor Follow Image</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        height: 100vh;
+        background-color: #ffffff;
+        overflow: hidden;
+        /* Prevents scrollbars if the image hits the edge */
+    }
+
+    #follower {
+        position: fixed;
+        width: auto;
+        height: 80px;
+        pointer-events: none;
+        transition: transform 0.1s ease-out;
+        left: 0;
+        top: 0;
+    }
+</style>
+
+<body>
+
+    <h1>Move your mouse around!</h1>
+
+    <img src="https://media.istockphoto.com/id/140472118/photo/middle-finger.jpg?s=612x612&w=0&k=20&c=PHWkY3qathm5pjKIIJ5G2fggGxln0puxrdYlD6ly3Nc=" id="follower" alt="Follower">
+
+    <script src="mousemove.js"></script>
+</body>
+
+</html>

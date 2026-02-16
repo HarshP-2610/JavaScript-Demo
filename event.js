@@ -75,7 +75,6 @@ colorPicker2.addEventListener("input", function(event) {
 // ============================================================
 let form = document.querySelector("form");
 
-form.addEventListener("submit", (event) => {
-    
+form.addEventListener("submit", () => {
     document.body.style.backgroundColor = "black";
 });

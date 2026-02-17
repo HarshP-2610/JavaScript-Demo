@@ -22,7 +22,7 @@
 // ============================================================
 
 let themeBtn = document.querySelector(".theme-btn");
-themeBtn.addEventListener("click", function() {
+themeBtn.addEventListener("click", function () {
     document.body.classList.toggle("bg-body");
 });
 
@@ -33,10 +33,10 @@ themeBtn.addEventListener("click", function() {
 let fileInput = document.querySelector("#file-upload");
 let buttonLabel = document.querySelector("#button-text");
 
-fileInput.addEventListener("change", function(event) {
-    
+fileInput.addEventListener("change", function (event) {
+
     if (event.target.files.length > 0) {
-       
+
         let fileName = event.target.files[0].name;
         buttonLabel.innerText = fileName;
         console.log("File uploaded:", fileName);
@@ -55,17 +55,17 @@ let colorPicker2 = document.querySelector("#color-picker2");
 let bigBox = document.querySelector("#big-box");
 
 // 2. Add the Event Listener
-colorPicker.addEventListener("input", function(event) {
-    
+colorPicker.addEventListener("input", function (event) {
+
     let selectedColor = event.target.value;
     console.log("Selected Color:", selectedColor);
     bigBox.style.backgroundColor = selectedColor;
 });
 
-colorPicker2.addEventListener("input", function(event) {
+colorPicker2.addEventListener("input", function (event) {
     let selectedColor = event.target.value;
     console.log("Border Color:", selectedColor);
-    bigBox.style.borderColor = selectedColor; 
+    bigBox.style.borderColor = selectedColor;
 });
 
 
@@ -78,3 +78,64 @@ let form = document.querySelector("form");
 form.addEventListener("submit", () => {
     document.body.style.backgroundColor = "black";
 });
+
+
+
+// ============================================================
+// 4. Button System InnerDiv, OuterDiv
+// ============================================================
+// Event Object:
+// sel.addEventListener("change", (dets) = {
+//      console.log(dets); ==> dets //that called event object
+// });
+// target, type, preventDefault
+// target --> that show element
+// type ->show Event Type
+// preventDefault --> use for html-form-- prevent form to refresh and lean details
+
+
+// event delegation ==> darek child par event listener na lagavata only parent par event listner lagavvu
+// Event Bubbling and Capturing
+// Event Bubbling -> jena par event aave tena par listener na hoy to aapdu event tena parent par listener gotase ane aavu karta karta upar traf move karshe
+
+
+let inner_div = document.querySelector(".inner_div")
+let outer_div = document.querySelector(".outer_div")
+let btn1 = document.querySelector(".btn")
+
+inner_div.addEventListener("click", () => {
+    console.log("inner_div clicked")
+})
+btn1.addEventListener("click", () => {
+    console.log("btn clicked")
+})
+outer_div.addEventListener("click", () => {
+    console.log("outer_div clicked")
+})
+
+
+
+// ============================================================
+// 5. Check And OverLine On Text
+// ============================================================
+
+//use case: make it to do list thing
+// when you click on text that show strike using bubbuling
+// crete list that show shopping things use css (text decoration -> line-through)
+// Badha checkbox select karo
+// let checkboxes = document.querySelectorAll(".check");
+
+// // Loop thi badha checkbox par event add karo
+// checkboxes.forEach(function(checkbox) {
+//     checkbox.addEventListener("change", function() {
+
+//         let listItem = this.parentElement;
+
+//         if (this.checked) {
+//             listItem.style.textDecoration = "line-through";
+//         } else {
+//             listItem.style.textDecoration = "none";
+//         }
+//     });
+// });
+

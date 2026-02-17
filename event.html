@@ -1,12 +1,21 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Name on Button</title>
     <style>
-        body { font-family: sans-serif; padding: 20px; transition: 0.3s; }
-        .bg-body { background-color: #1a1a1a; color: white; }
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .bg-body {
+            background-color: #1a1a1a;
+            color: white;
+        }
 
         /* Hide the default ugly browser input */
         #file-upload {
@@ -41,12 +50,64 @@
             transition: background-color 0.2s ease;
         }
 
-        /* Styling for the color picker container */
+        
+
+
+
+
+
         .controls {
             padding: 10px;
+           
+        }
+
+        .outer_div {
+            width: 200px;
+            height: 200px;
+            background-color: #3498db;
+            /* Blue */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+             margin-top: 15px;
+        }
+
+        /* The middle container */
+        .inner_div {
+            width: 110px;
+            height: 110px;
+            background-color: #2ecc71;
+            /* Green */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        /* The Button */
+        .btn {
+            padding: 10px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+            transition:
+                transform 0.2s,
+                background-color 0.2s;
+        }
+
+        /* Hover effect for the button */
+        .btn:hover {
+            background-color: #f1f1f1;
+            transform: scale(1.05);
         }
     </style>
 </head>
+
 <body>
 
     <button class="theme-btn">Black Theme</button>
@@ -55,7 +116,7 @@
     <label for="file-upload" class="custom-btn" id="button-text">
         Upload File
     </label>
-    
+
     <input type="file" id="file-upload">
 
 
@@ -66,7 +127,7 @@
         <input type="color" id="color-picker">
     </div>
 
-     <div class="controls">
+    <div class="controls">
         <label>Change Border:</label>
         <input type="color" id="color-picker2">
     </div>
@@ -78,7 +139,260 @@
         <input type="submit" value="submit">
 
     </form>
+<br>
+<hr>
+
+    <div class="outer_div">
+        <div class="inner_div">
+            <button class="btn">Click Me</button>
+        </div>
+    </div>
+
+    <ul>
+        <li>
+            <input type="checkbox" class="check"> Buy groceries
+        </li>
+        <li>
+            <input type="checkbox" class="check"> Finish homework
+        </li>
+        <li>
+            <input type="checkbox" class="check"> Go to the gym
+        </li>
+    </ul>
 
     <script src="event.js"></script>
 </body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Event Lab</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --text: #f1f5f9;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 0;
+            transition: all 0.4s ease;
+        }
+
+        /* Dark Mode Class (Toggled by your JS) */
+        body.bg-body {
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            transition: inherit;
+        }
+
+        body.bg-body .card {
+            background: var(--card-bg);
+            border-color: var(--border);
+        }
+
+        h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        /* Buttons & Inputs */
+        .theme-btn,
+        .custom-btn,
+        input[type="submit"] {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.2s;
+            background: var(--accent);
+            color: white;
+            display: inline-block;
+        }
+
+        .theme-btn {
+            background: #334155;
+            margin-bottom: 20px;
+        }
+
+        .theme-btn:hover {
+            background: #000;
+        }
+
+        #file-upload {
+            display: none;
+        }
+
+        /* The Big Box & Color Pickers */
+        #big-box {
+            width: 120px;
+            height: 120px;
+            border: 4px solid #cbd5e1;
+            border-radius: 20px;
+            margin: 20px auto;
+            background: #fff;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        input[type="color"] {
+            border: none;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            background: none;
+        }
+
+        /* Nested Divs Section */
+        .outer_div {
+            width: 180px;
+            height: 180px;
+            background: #3498db;
+            border-radius: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+
+        .inner_div {
+            width: 110px;
+            height: 110px;
+            background: #2ecc71;
+            border-radius: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 12px 18px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        /* Todo List */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        body.bg-body li {
+            border-color: var(--border);
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="theme-btn">🌓 Toggle Theme</button>
+
+    <div class="container">
+        <div class="card">
+            <h3>Customizer</h3>
+            <label for="file-upload" class="custom-btn" id="button-text">📁 Upload File</label>
+            <input type="file" id="file-upload">
+
+            <div id="big-box"></div>
+
+            <div class="controls">
+                <label>Background Color</label>
+                <input type="color" id="color-picker" value="#ffffff">
+            </div>
+            <div class="controls">
+                <label>Border Color</label>
+                <input type="color" id="color-picker2" value="#cbd5e1">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Actions & Bubbling</h3>
+            <form action="" id="form">
+                <input type="text" placeholder="Type something...">
+                <input type="submit" value="Submit">
+            </form>
+
+            <div class="outer_div">
+                <div class="inner_div">
+                    <button class="btn">Click Me</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Todo List</h3>
+            <ul id="main-list">
+                <li><input type="checkbox" class="check"> <span>Buy groceries</span></li>
+                <li><input type="checkbox" class="check"> <span>Finish homework</span></li>
+                <li><input type="checkbox" class="check"> <span>Go to the gym</span></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Cart</h3>
+            <ul id="cart-list">
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="event.js"></script>
+</body>
+
 </html>

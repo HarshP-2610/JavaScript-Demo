@@ -139,3 +139,38 @@ outer_div.addEventListener("click", () => {
 //     });
 // });
 
+const mainList = document.querySelector("#main-list");
+const cartList = document.querySelector("#cart-list");
+
+mainList.addEventListener("change", function (e) {
+    
+    if (e.target.classList.contains("check")) {
+        const checkbox = e.target;
+        const listItem = checkbox.parentElement;
+        const itemText = listItem.querySelector("span").innerText;
+
+        if (checkbox.checked) {
+            // 1. Add Strike-through
+            listItem.style.textDecoration = "line-through";
+            listItem.style.color = "gray";
+
+            // 2. Add to Cart
+            // We give it a unique ID or class so we can find it later to remove it
+            let cartItem = document.createElement("li");
+            cartItem.innerText = itemText;
+            cartItem.setAttribute("data-item", itemText); // Helper to identify the item
+            cartList.appendChild(cartItem);
+
+        } else {
+            // 1. Remove Strike-through
+            listItem.style.textDecoration = "none";
+            listItem.style.color = "black";
+
+            // 2. Remove from Cart
+            const itemToRemove = cartList.querySelector(`[data-item="${itemText}"]`);
+            if (itemToRemove) {
+                itemToRemove.remove();
+            }
+        }
+    }
+});

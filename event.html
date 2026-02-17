@@ -329,6 +329,61 @@
             border: 1px solid #cbd5e1;
             margin-right: 5px;
         }
+
+
+
+
+        /*Text Limit */
+        /* Styling for the Character Counter Card */
+        #counter {
+            width: 100%;
+            box-sizing: border-box;
+            /* Ensures padding doesn't break width */
+            padding: 12px;
+            border-radius: 8px;
+            border: 2px solid #cbd5e1;
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+            background: #fff;
+            color: #1e293b;
+        }
+
+        #counter:focus {
+            border-color: var(--accent);
+        }
+
+        /* Change styling when the input is disabled */
+        #counter:disabled {
+            background-color: #f1f5f9;
+            cursor: not-allowed;
+            border-color: #ef4444;
+            /* Red border when locked */
+        }
+
+        .limit-text {
+            margin-top: 15px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        #count {
+            color: var(--accent);
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        /* Dark Mode support for the counter */
+        body.bg-body #counter {
+            background: #0f172a;
+            color: white;
+            border-color: var(--border);
+        }
+
+        body.bg-body #counter:disabled {
+            background-color: #334155;
+        }
     </style>
 </head>
 
@@ -383,6 +438,13 @@
             </ul>
         </div>
 
+    </div>
+
+
+    <div class="card">
+        <h3>Character Counter</h3>
+        <input type="text" id="counter" placeholder="Start typing...">
+        <h3 class="limit-text">Remaining: <span id="count">10</span></h3>
     </div>
 
     <script src="event.js"></script>

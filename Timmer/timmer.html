@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f2f2f2;
+        }
+
+        .main {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* CARD */
+        .card {
+            width: 350px;
+            padding: 20px;
+            border-radius: 16px;
+            background-color: #d4d4d4;
+            text-align: center;
+        }
+
+        .card img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 1px 1px 5px gray;
+            margin: 15px 0;
+        }
+
+        h1 {
+            color: crimson;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            width: 100px;
+            height: 40px;
+            border: none;
+            border-radius: 8px;
+            background-color: crimson;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        /* DOWNLOAD BOX */
+        #download {
+            position: absolute;
+            right: 40px;
+            top: 40px;
+        }
+
+        .outer {
+            width: 220px;
+            padding: 20px;
+            border-radius: 16px;
+            background-color: #222;
+            text-align: center;
+        }
+
+        .progress-card {
+            margin: 15px 0;
+            height: 6px;
+            width: 100%;
+            background-color: #555;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: white;
+            transition: width 0.3s ease;
+        }
+
+        .percent {
+            font-size: 14px;
+            font-weight: 500;
+            color: #d1d1d1;
+        }
+
+        h2 {
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="card">
+            <h1>Limited Time Offer</h1>
+            <img src="https://m.media-amazon.com/images/I/616jllf33ZL._AC_UY1000_.jpg" alt="watch" />
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+                harum earum possimus expedita recusandae magni perferendis non veniam
+                iure officiis?
+            </p>
+            <button class="btn">X</button>
+        </div>
+    </div>
+    <div id="download">
+        <div class="outer">
+            <h2>Downloading ...</h2>
+            <div class="progress-card">
+                <div class="progress-bar"></div>
+            </div>
+            <p class="percent"></p>
+        </div>
+    </div>
+</body>
+<script src="Timmer.js"></script>
+
+</html>

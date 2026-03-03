@@ -1,97 +1,87 @@
-# 🚀 JavaScript Mastery Repository
+# JavaScript Core Fundamentals 📘
 
-Welcome to the **JavaScript Mastery Repository**! This project is a comprehensive collection of JavaScript fundamentals, advanced concepts, and real-world mini-projects. It is designed to take you from core basics to building interactive web applications.
-
----
-
-## 📂 Project Structure
-
-```text
-JS-Demo/
-├── 📁 Card/              # Interactive Note Card Component
-├── 📁 SearchBar/         # Dynamic Search Filter Implementation
-├── 📁 Storage/           # LocalStorage & SessionStorage Demos
-├── 📁 Timmer/            # Digital Timer / Stopwatch Application
-├── 📁 To-Do List/        # Functional Task Management App
-├── 📄 array.js           # Array Fundamentals
-├── 📄 array2.js          # Advanced Array Operations
-├── 📄 ary_methods.js     # ES6+ Array Methods (map, filter, reduce)
-├── 📄 controlflow.js     # if-else, switch, ternary operators
-├── 📄 datatypes.js       # Primitive vs Reference types
-├── 📄 dom.js             # Basic DOM Selection & Manipulation
-├── 📄 Dom_ex.js          # Advanced DOM Exercises
-├── 📄 event.js           # Event Listeners & Handling
-├── 📄 functions.js       # Declaration, Expression, & Arrow Functions
-├── 📄 loops.js           # for, while, do-while, for-of, for-in
-├── 📄 objects.js         # Object Literals & Methods
-├── 📄 operator.js        # Arithmetic, Logical, & Comparison Operators
-└── ...and more!
-```
+This documentation covers the essential building blocks of JavaScript: Data Types, Operators, Control Flow, and Loops.
 
 ---
 
-## 🧠 Core JavaScript Concepts Covered
-
-### 1️⃣ Fundamentals
-- **Data Types:** Understanding `String`, `Number`, `Boolean`, `Null`, `Undefined`, and `Objects`.
-- **Operators:** Master Math, Logical, and Bitwise operations.
-- **Control Flow:** Logic building with conditional statements.
-
-### 2️⃣ Data Structures
-- **Arrays:** Deep dive into manipulation, sorting, and iteration.
-- **Objects:** Learning about key-value pairs, nested objects, and `this` keyword.
-
-### 3️⃣ Functions & Logic
-- **Functions:** Scope, closures, and modern arrow function syntax.
-- **Loops:** Efficiently iterating over data using various loop types.
-
-### 4️⃣ DOM & Events
-- **DOM Manipulation:** Methods to select, modify, and style HTML elements dynamically.
-- **Event Handling:** Responding to user actions like `click`, `mousemove`, `keydown`, and `submit`.
+## 📋 Table of Contents
+1. [Data Types](#1-data-types)
+2. [Operators](#2-operators)
+3. [Control Flow](#3-control-flow)
+4. [Loops](#4-loops)
 
 ---
 
-## 🛠️ Mini Projects
+## 1️⃣ Data Types
+JavaScript is dynamically typed, meaning variables can hold different types of data during execution.
 
-This repository includes several interactive modules to practice DOM manipulation and state management:
+### 🔹 Primitive Types (Stored by Value)
+* **String**: Text data. `let name = "Mahek";`
+* **Number**: Integers and decimals. `let age = 25;`
+* **Boolean**: Logical values. `let isTrue = true;`
+* **Undefined**: Declared but not assigned. `let x;`
+* **Null**: Intentional empty value. `let y = null;`
+* **Symbol**: Unique identifiers. `let s = Symbol("id");`
+* **BigInt**: Large integers. `let big = 100n;`
 
-| Project | Description |
-| :--- | :--- |
-| **Note Card** | A stylized card component for displaying user notes or information. |
-| **Search Bar** | A real-time filtering system for searching through lists. |
-| **Storage API** | Demonstrates how to save and retrieve data using the browser's LocalStorage. |
-| **Timer** | A functional stopwatch with start, stop, and reset features. |
-| **To-Do List** | A classic CRUD application to manage daily tasks. |
-| **Form Validation** | Robust client-side validation for secure and user-friendly forms. |
-
----
-
-## 🚀 How to Use
-
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/HarshP-2610/JavaScript-Demo.git
-   ```
-
-2. **Explore Concepts:**
-   Open any `.js` file to see commented code examples and logic implementations.
-
-3. **Run Mini Projects:**
-   - Navigate to any project folder (e.g., `Card/` or `To-Do List/`).
-   - Open the `index.html` or equivalent `.html` file in your browser to see the live demo.
+### 🔹 Non-Primitive Types (Stored by Reference)
+* **Array**: Ordered lists. `let list = [1, 2];`
+* **Object**: Key-value pairs. `let obj = {id: 1};`
+* **Function**: Reusable code blocks. `function ok() {}`
 
 ---
 
-## 🎨 Technologies Used
-- **Language:** JavaScript (ES6+)
-- **Markup:** HTML5
-- **Styling:** CSS3 (Vanilla)
-- **APIs:** DOM API, Web Storage API
+## 2️⃣ Operators
+Operators are used to perform operations on variables and values.
+
+* **Arithmetic**: Math operations. `console.log(10 % 3); // 1`
+* **Assignment**: Assigning values. `x += 5;`
+* **Comparison**: returns true/false. `10 === "10"; // false`
+* **Logical**: Combining booleans. `true && false; // false`
+* **Unary**: Single operand. `y++;` or `!true;`
+* **Ternary**: Shorthand if-else. `10 > 5 ? "Yes" : "No";`
 
 ---
 
-## 📝 Author
-**Harsh**
-[GitHub Profile](https://github.com/HarshP-2610)
+## 3️⃣ Control Flow
+Control flow manages the order in which statements are executed.
 
-*Happy Coding!* 💻✨
+| Name | Detail | Example |
+| :--- | :--- | :--- |
+| **If-Else** | Executes code based on condition | `if(x > 5) { ... }` |
+| **Switch** | Selects one of many code blocks | `switch(val) { case 1: ... }` |
+| **Ternary** | Single line conditional | `age >= 18 ? "Adult" : "Minor"` |
+| **Nullish** | Handles `null` or `undefined` | `let theme = userPref ?? "dark";` |
+
+
+
+---
+
+## 4️⃣ Loops
+Loops are used to repeat a block of code multiple times.
+
+### 🔹 Standard Loops
+* **For Loop**: Best for fixed iterations.  
+    `for(let i=0; i<3; i++) { console.log(i); }`
+* **While Loop**: Runs while a condition is true.  
+    `while(x < 3) { x++; }`
+* **Do-While**: Runs at least once.  
+    `do { x++; } while(x < 3);`
+
+### 🔹 Specialized Loops
+* **For...Of**: Iterates over **Array values**.  
+    `for(let val of [10, 20]) { console.log(val); }`
+* **For...In**: Iterates over **Object keys**.  
+    `for(let key in {a:1}) { console.log(key); }`
+
+
+
+---
+
+## 🧠 Quick Tips
+* Use `typeof` to check primitive types (e.g., `typeof "hi"` is `"string"`).
+* Use `instanceof` to check reference types (e.g., `arr instanceof Array`).
+* `NaN` is technically a `number` type, and `null` is an `object` type.
+
+---
+*Generated for JavaScript Learning Path 2026*

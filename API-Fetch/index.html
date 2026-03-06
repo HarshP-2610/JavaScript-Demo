@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Directory</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #eef2f7, #d9e4f5);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            color: #2c3e50;
+            font-size: 32px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .card img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #4f7cff;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin: 6px 0;
+            color: #555;
+        }
+
+        .label {
+            font-weight: 600;
+            color: #4f7cff;
+        }
+
+        .divider {
+            height: 1px;
+            background: #eee;
+            margin: 12px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>User Directory</h1>
+
+    <div class="card">
+        <img id="photo" src="" />
+
+        <h3 id="fullname">Loading...</h3>
+
+        <div class="divider"></div>
+
+        <p><span class="label">Email:</span> <span id="email"></span></p>
+
+        <p><span class="label">Phone:</span> <span id="phone"></span></p>
+
+        <p><span class="label">Location:</span> <span id="location"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

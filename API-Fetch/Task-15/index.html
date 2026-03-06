@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Show Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white p-8">
+
+    <div class="max-w-7xl mx-auto">
+        <header class="flex justify-between items-center mb-12 border-b border-gray-800 pb-6">
+            <h1 class="text-4xl font-black text-red-600 tracking-tighter uppercase">TV MAZE</h1>
+            <p class="text-gray-400 text-sm font-medium">Trending Worldwide</p>
+        </header>
+        
+        <div id="showGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            <p class="col-span-full text-center text-gray-600 animate-pulse">Scanning frequencies...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

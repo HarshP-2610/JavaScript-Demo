@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Advice Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-blue-50 flex items-center justify-center h-screen">
+
+    <div class="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-md text-center border-t-4 border-blue-500">
+        <h1 class="text-3xl font-bold text-blue-600 mb-2">💡 Daily Advice</h1>
+        <p class="text-gray-500 mb-6 italic">Words of wisdom just for you</p>
+
+        <div class="bg-blue-50 p-6 rounded-xl mb-6 min-h-[100px] flex items-center justify-center">
+            <p id="adviceText" class="text-xl font-medium text-gray-800 leading-relaxed">
+                Loading your wisdom...
+            </p>
+        </div>
+
+        <button onclick="getAdvice()"
+            class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 active:scale-95 transition-all shadow-lg">
+            Give Me More Advice
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
